@@ -12,11 +12,21 @@ all: check
 
 .PHONY: install
 install:
-	install -D -m 755 raspberrypi-firmware-generator $(DESTDIR)$(PREFIX)/lib/systemd/system-generators/raspberrypi-firmware-generator
+	generatordir=$${SYSTEMDSYSTEMGENERATORDIR:-$$(pkg-config --define-variable=prefix=$(PREFIX) \
+								 --variable=systemdsystemgeneratordir \
+								 systemd 2>/dev/null)}; \
+	if [ -n "$$generatordir" ]; then \
+		install -D -m 755 raspberrypi-firmware-generator $(DESTDIR)$$generatordir/raspberrypi-firmware-generator; \
+	fi
 
 .PHONY: uninstall
 uninstall:
-	rm -f $(DESTDIR)$(PREFIX)/lib/systemd/system-generators/raspberrypi-firmware-generator
+	generatordir=$${SYSTEMDSYSTEMGENERATORDIR:-$$(pkg-config --define-variable=prefix=$(PREFIX) \
+								 --variable=systemdsystemgeneratordir \
+								 systemd 2>/dev/null)}; \
+	if [ -n "$$generatordir" ]; then \
+		rm -f $(DESTDIR)$$generatordir/raspberrypi-firmware-generator; \
+	fi
 
 .PHONY: check
 check: raspberrypi-firmware-generator
