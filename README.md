@@ -59,6 +59,13 @@ Or
 
 	$ make install DESTDIR=$PWD/pkg PREFIX=/usr
 
+## EMBEDDED BUILD SYSTEMS
+
+[raspberrypi-firmware-generator(1)] is neither a part of [Raspberry Pi OS] nor
+[Buildroot] nor [OpenEmbedded].
+
+However, a [Buildroot package] is available in the `support` directory.
+
 ## BUGS
 
 Report bugs at *https://github.com/gportay/raspberrypi-firmware-systemd-generator/issues*
@@ -77,6 +84,9 @@ Software Foundation, either version 2.1 of the License, or (at your option) any
 later version.
 
 [Bourne Again shell]: https://www.gnu.org/software/bash/
+[Buildroot package]: support/raspberrypi-firmware-systemd-generator.mk
+[Buildroot]: https://buildroot.org/
+[OpenEmbedded]: http://www.openembedded.org/
 [Raspberry Pi OS]: https://www.raspberrypi.com/software/
 [autoboot.txt]: https://www.raspberrypi.com/documentation/computers/config_txt.html#autoboot-txt
 [bash(1)]: https://linux.die.net/man/1/bash
