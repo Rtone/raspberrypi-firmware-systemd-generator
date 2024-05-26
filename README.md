@@ -64,7 +64,8 @@ Or
 [raspberrypi-firmware-generator(1)] is neither a part of [Raspberry Pi OS] nor
 [Buildroot] nor [OpenEmbedded].
 
-However, a [Buildroot package] is available in the `support` directory.
+However, a [Buildroot package] and a [Bitbake recipe] are available in the
+`support` the `support` directory.
 
 ## BUGS
 
@@ -83,6 +84,7 @@ the terms of the GNU Lesser General Public License as published by the Free
 Software Foundation, either version 2.1 of the License, or (at your option) any
 later version.
 
+[Bitbake recipe]: support/raspberrypi-firmware-systemd-generator_git.bb
 [Bourne Again shell]: https://www.gnu.org/software/bash/
 [Buildroot package]: support/raspberrypi-firmware-systemd-generator.mk
 [Buildroot]: https://buildroot.org/
