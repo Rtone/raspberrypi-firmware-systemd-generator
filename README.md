@@ -84,6 +84,11 @@ the terms of the GNU Lesser General Public License as published by the Free
 Software Foundation, either version 2.1 of the License, or (at your option) any
 later version.
 
+## SEE ALSO
+
+[systemd-fstab-generator(8)], [systemd-gpt-auto-generator(8)],
+[systemd.generator(7)], [xxd(1)]
+
 [Bitbake recipe]: support/raspberrypi-firmware-systemd-generator_git.bb
 [Bourne Again shell]: https://www.gnu.org/software/bash/
 [Buildroot package]: support/raspberrypi-firmware-systemd-generator.mk
