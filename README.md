@@ -67,6 +67,10 @@ Or
 However, a [Buildroot package] and a [Bitbake recipe] are available in the
 `support` the `support` directory.
 
+## PATCHES
+
+Sumbit patches at *https://github.com/gportay/raspberrypi-firmware-systemd-generator/pulls*
+
 ## BUGS
 
 Report bugs at *https://github.com/gportay/raspberrypi-firmware-systemd-generator/issues*
