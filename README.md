@@ -69,11 +69,11 @@ However, a [Buildroot package] and a [Bitbake recipe] are available in the
 
 ## PATCHES
 
-Sumbit patches at *https://github.com/gportay/raspberrypi-firmware-systemd-generator/pulls*
+Sumbit patches at <https://github.com/gportay/raspberrypi-firmware-systemd-generator/pulls>
 
 ## BUGS
 
-Report bugs at *https://github.com/gportay/raspberrypi-firmware-systemd-generator/issues*
+Report bugs at <https://github.com/gportay/raspberrypi-firmware-systemd-generator/issues>
 
 ## AUTHOR
 
