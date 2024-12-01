@@ -1,5 +1,5 @@
 SUMMARY = "A systemd-generator for mounting the bootloader partitions of the \
-           Raspberry Pi firmware"
+           Raspberry Pi firmware."
 HOMEPAGE = "https://github.com/gportay/raspberrypi-firmware-systemd-generator"
 BUGTRACKER = "https://github.com/gportay/raspberrypi-firmware-systemd-generator/issues"
 LICENSE = "LGPL-2.1-only"
@@ -26,5 +26,5 @@ do_install() {
 	install -D ${S}/raspberrypi-firmware-generator ${D}${libdir}/systemd/system-generators/raspberrypi-firmware-generator
 }
 
-RDEPENDS:${PN} += "bash"
+RDEPENDS:${PN} += "bash vim-xxd"
 FILES:${PN} += "${libdir}/systemd/system-generators/raspberrypi-firmware-generator"
