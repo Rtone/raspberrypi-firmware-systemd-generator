@@ -41,9 +41,10 @@ The [Bourne Again shell] since the systemd generator is a shell script.
 _Note_: [raspberrypi-firmware-generator(1)] is written in pure [sh(1)] and it
 does not use any bashism.
 
-### XXD
+### FDTGET
 
-The [xxd(1)] utility to read the bootloader values from the device-tree.
+The device-tree compiler [fdtget] utility to read the bootloader values from
+the device-tree.
 
 ## INSTALL
 
@@ -90,8 +91,8 @@ later version.
 
 ## SEE ALSO
 
-[systemd-fstab-generator(8)], [systemd-gpt-auto-generator(8)],
-[systemd.generator(7)], [xxd(1)]
+[fdtget], [systemd-fstab-generator(8)], [systemd-gpt-auto-generator(8)],
+[systemd.generator(7)]
 
 [Bitbake recipe]: support/raspberrypi-firmware-systemd-generator_git.bb
 [Bourne Again shell]: https://www.gnu.org/software/bash/
@@ -103,6 +104,7 @@ later version.
 [bash(1)]: https://linux.die.net/man/1/bash
 [bookworm]: https://www.raspberrypi.com/documentation/computers/config_txt.html#what-is-config-txt
 [config.txt]: https://www.raspberrypi.com/documentation/computers/config_txt.html
+[fdtget]: https://git.kernel.org/pub/scm/utils/dtc/dtc.git/tree/fdtget.c
 [fstab(5)]: https://linux.die.net/man/5/fstab
 [raspberrypi-firmware-generator(1)]: raspberrypi-firmware-generator
 [sh(1)]: https://linux.die.net/man/1/sh
@@ -111,4 +113,3 @@ later version.
 [systemd.generator(7)]: https://www.freedesktop.org/software/systemd/man/latest/systemd.generator.html
 [systemd.mount(5)]: https://www.freedesktop.org/software/systemd/man/latest/systemd.mount.html
 [tryboot]: https://www.raspberrypi.com/documentation/computers/raspberry-pi.html#fail-safe-os-updates-tryboot
-[xxd(1)]: https://linux.die.net/man/1/xxd

@@ -7,6 +7,8 @@ config BR2_PACKAGE_RASPBERRYPI_FIRMWARE_SYSTEMD_GENERATOR
 	depends on BR2_PACKAGE_SYSTEMD # runtime
 	depends on BR2_USE_MMU # bash
 	select BR2_PACKAGE_BASH # runtime
+	select BR2_PACKAGE_DTC # dtc-programs
+	select BR2_PACKAGE_DTC_PROGRAMS # runtime (fdtget)
 	help
 	  A systemd-generator for mounting the bootloader partitions of
 	  the Raspberry Pi firmware.

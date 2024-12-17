@@ -9,7 +9,7 @@
 #  version 2.1 of the License.
 #
 
-if ! part="$(xxd -o0 -l4 -p /sys/firmware/devicetree/base/chosen/bootloader/partition)"
+if ! part="$(fdtget /sys/firmware/fdt /chosen/bootloader partition)"
 then
 	exit 1
 fi
