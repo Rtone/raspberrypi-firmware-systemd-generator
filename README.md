@@ -62,11 +62,8 @@ Or
 
 ## EMBEDDED BUILD SYSTEMS
 
-[raspberrypi-firmware-generator(1)] is neither a part of [Raspberry Pi OS] nor
-[Buildroot].
-
-However, a [Buildroot package] is available in the `support` directory and a
-[Bitbake recipe] is available in the layer [meta-downstream].
+A [Buildroot package] is available in the br2-external [rtone-br2-external] and
+a [Bitbake recipe] is available in the layer [meta-downstream].
 
 ## PATCHES
 
@@ -96,8 +93,7 @@ later version.
 
 [Bitbake recipe]: https://github.com/gportay/meta-downstream/blob/master/meta-rauc-raspberrypi-firmware/recipes-bsp/raspberrypi-firmware-systemd-generator/raspberrypi-firmware-systemd-generator_git.bb
 [Bourne Again shell]: https://www.gnu.org/software/bash/
-[Buildroot package]: support/raspberrypi-firmware-systemd-generator.mk
-[Buildroot]: https://buildroot.org/
+[Buildroot package]: https://github.com/Rtone/rtone-br2-external/tree/main/package/raspberrypi-firmware-systemd-generator
 [Raspberry Pi OS]: https://www.raspberrypi.com/software/
 [autoboot.txt]: https://www.raspberrypi.com/documentation/computers/config_txt.html#autoboot-txt
 [bash(1)]: https://linux.die.net/man/1/bash
