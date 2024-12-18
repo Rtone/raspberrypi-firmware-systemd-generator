@@ -66,7 +66,7 @@ Or
 [Buildroot] nor [OpenEmbedded].
 
 However, a [Buildroot package] and a [Bitbake recipe] are available in the
-`support` the `support` directory.
+`support` directory.
 
 ## PATCHES
 
