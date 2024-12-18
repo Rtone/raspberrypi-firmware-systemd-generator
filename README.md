@@ -63,10 +63,10 @@ Or
 ## EMBEDDED BUILD SYSTEMS
 
 [raspberrypi-firmware-generator(1)] is neither a part of [Raspberry Pi OS] nor
-[Buildroot] nor [OpenEmbedded].
+[Buildroot].
 
-However, a [Buildroot package] and a [Bitbake recipe] are available in the
-`support` directory.
+However, a [Buildroot package] is available in the `support` directory and a
+[Bitbake recipe] is available in the layer [meta-downstream].
 
 ## PATCHES
 
@@ -94,11 +94,10 @@ later version.
 [fdtget], [systemd-fstab-generator(8)], [systemd-gpt-auto-generator(8)],
 [systemd.generator(7)]
 
-[Bitbake recipe]: support/raspberrypi-firmware-systemd-generator_git.bb
+[Bitbake recipe]: https://github.com/gportay/meta-downstream/blob/master/meta-rauc-raspberrypi-firmware/recipes-bsp/raspberrypi-firmware-systemd-generator/raspberrypi-firmware-systemd-generator_git.bb
 [Bourne Again shell]: https://www.gnu.org/software/bash/
 [Buildroot package]: support/raspberrypi-firmware-systemd-generator.mk
 [Buildroot]: https://buildroot.org/
-[OpenEmbedded]: http://www.openembedded.org/
 [Raspberry Pi OS]: https://www.raspberrypi.com/software/
 [autoboot.txt]: https://www.raspberrypi.com/documentation/computers/config_txt.html#autoboot-txt
 [bash(1)]: https://linux.die.net/man/1/bash
@@ -106,6 +105,7 @@ later version.
 [config.txt]: https://www.raspberrypi.com/documentation/computers/config_txt.html
 [fdtget]: https://git.kernel.org/pub/scm/utils/dtc/dtc.git/tree/fdtget.c
 [fstab(5)]: https://linux.die.net/man/5/fstab
+[meta-rauc-raspberrypi-firmware]: https://github.com/gportay/meta-downstream/blob/master/meta-rauc-raspberrypi-firmware
 [raspberrypi-firmware-generator(1)]: raspberrypi-firmware-generator
 [sh(1)]: https://linux.die.net/man/1/sh
 [systemd-fstab-generator(8)]: https://www.freedesktop.org/software/systemd/man/latest/systemd-fstab-generator.html
