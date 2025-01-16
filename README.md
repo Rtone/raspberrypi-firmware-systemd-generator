@@ -79,9 +79,9 @@ Written by Gaël PORTAY *gael.portay@rtone.fr*
 
 ## COPYRIGHT
 
-Copyright 2024 Gaël PORTAY
+Copyright 2024-2025 Gaël PORTAY
 
-Copyright 2024 Rtone
+Copyright 2024-2025 Rtone
 
 This program is free software: you can redistribute it and/or modify it under
 the terms of the GNU Lesser General Public License as published by the Free
@@ -103,8 +103,10 @@ later version.
 [config.txt]: https://www.raspberrypi.com/documentation/computers/config_txt.html
 [fdtget]: https://git.kernel.org/pub/scm/utils/dtc/dtc.git/tree/fdtget.c
 [fstab(5)]: https://linux.die.net/man/5/fstab
+[meta-downstream]: https://www.portay.io/meta-downstream
 [meta-rauc-raspberrypi-firmware]: https://github.com/gportay/meta-downstream/blob/master/meta-rauc-raspberrypi-firmware
 [raspberrypi-firmware-generator(1)]: raspberrypi-firmware-generator
+[rtone-br2-external]: https://rtone.github.io/rtone-br2-external
 [sh(1)]: https://linux.die.net/man/1/sh
 [systemd-fstab-generator(8)]: https://www.freedesktop.org/software/systemd/man/latest/systemd-fstab-generator.html
 [systemd-gpt-auto-generator(8)]: https://www.freedesktop.org/software/systemd/man/latest/systemd-gpt-auto-generator.html
