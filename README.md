@@ -36,10 +36,10 @@ root device is on the same device.
 
 ### BASH
 
-The [Bourne Again shell] since the systemd generator is a shell script.
+The [Bourne Again shell] since the systemd generator is a shell script using
+the compound command `[[` bashism.
 
-_Note_: [raspberrypi-firmware-generator(1)] is written in pure [sh(1)] and it
-does not use any bashism.
+_Important_: [raspberrypi-firmware-generator(1)] is written in pure [bash(1)].
 
 ### FDTGET
 
