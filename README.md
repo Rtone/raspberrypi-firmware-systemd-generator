@@ -49,9 +49,14 @@ the device-tree.
 
 ### UTIL-LINUX
 
-The util-linux [lsblk(8)] utility to list for the FAT filesystems and to
-generate the systemd mount unit configuration encoding information about the
-nth FAT filesystem given by the bootloader value `boot_partition`.
+The util-linux [findmnt(8)] and [lsblk(8)] utilities to locate the bootloader
+FAT filesystem on the same device as the rootfs, and generate the systemd mount
+unit configuration encoding information about that nth FAT filesystem given by
+the bootloader value `boot_partition`.
+
+__Note__: The bootloader sets the index of the nth FAT partition used during
+the boot process but it does **NOT** set on which device. It is technically
+false to assume it is on the same device.
 
 ## INSTALL
 
@@ -109,6 +114,7 @@ later version.
 [bookworm]: https://www.raspberrypi.com/documentation/computers/config_txt.html#what-is-config-txt
 [config.txt]: https://www.raspberrypi.com/documentation/computers/config_txt.html
 [fdtget]: https://git.kernel.org/pub/scm/utils/dtc/dtc.git/tree/fdtget.c
+[findmnt(8)]: https://linux.die.net/man/8/findmnt
 [fstab(5)]: https://linux.die.net/man/5/fstab
 [lsblk(8)]: https://linux.die.net/man/8/lsblk
 [meta-downstream]: https://www.portay.io/meta-downstream

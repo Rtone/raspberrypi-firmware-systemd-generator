@@ -24,10 +24,30 @@ then
 	exit 1
 fi
 
+dev="$(findmnt --output SOURCE --noheadings /)"
+if [[ ! "$dev" ]]
+then
+	exit 1
+fi
+
+dev="$(realpath "/sys/class/block/${dev##*/}")"
+while [[ "$dev" ]] && [[ ! -e "$dev/removable" ]]
+do
+	dev="${dev%/*}"
+done
+
+dev="${dev##*/}"
+if [[ ! "$dev" ]]
+then
+	exit 1
+fi
+
+dev="/dev/$dev"
 mapfile -t parts < <(lsblk --noheadings --output PATH \
 			   --filter 'PARTTYPE == "c12a7328-f81f-11d2-ba4b-00a0c93ec93b"
 			          OR PARTTYPE == "ebd0a0a2-b9e5-4433-87c0-68b6b72699c7"
-			          OR PARTTYPE == "0xc"')
+			          OR PARTTYPE == "0xc"' \
+			   "$dev")
 what="${parts[((part-1))]}"
 if [[ ! "$what" ]]
 then
