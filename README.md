@@ -37,7 +37,8 @@ root device is on the same device.
 ### BASH
 
 The [Bourne Again shell] since the systemd generator is a shell script using
-the compound command `[[` bashism.
+several bashism (such as `bash` arrays, the compound command `[[`, or the
+binary operator `=~`).
 
 _Important_: [raspberrypi-firmware-generator(1)] is written in pure [bash(1)].
 
@@ -45,6 +46,12 @@ _Important_: [raspberrypi-firmware-generator(1)] is written in pure [bash(1)].
 
 The device-tree compiler [fdtget] utility to read the bootloader values from
 the device-tree.
+
+### UTIL-LINUX
+
+The util-linux [lsblk(8)] utility to list for the FAT filesystems and to
+generate the systemd mount unit configuration encoding information about the
+nth FAT filesystem given by the bootloader value `boot_partition`.
 
 ## INSTALL
 
@@ -103,6 +110,7 @@ later version.
 [config.txt]: https://www.raspberrypi.com/documentation/computers/config_txt.html
 [fdtget]: https://git.kernel.org/pub/scm/utils/dtc/dtc.git/tree/fdtget.c
 [fstab(5)]: https://linux.die.net/man/5/fstab
+[lsblk(8)]: https://linux.die.net/man/8/lsblk
 [meta-downstream]: https://www.portay.io/meta-downstream
 [meta-rauc-raspberrypi-firmware]: https://github.com/gportay/meta-downstream/blob/master/meta-rauc-raspberrypi-firmware
 [raspberrypi-firmware-generator(1)]: raspberrypi-firmware-generator

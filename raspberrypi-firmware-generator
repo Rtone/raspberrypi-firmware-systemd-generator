@@ -24,6 +24,16 @@ then
 	exit 1
 fi
 
+mapfile -t parts < <(lsblk --noheadings --output PATH \
+			   --filter 'PARTTYPE == "c12a7328-f81f-11d2-ba4b-00a0c93ec93b"
+			          OR PARTTYPE == "ebd0a0a2-b9e5-4433-87c0-68b6b72699c7"
+			          OR PARTTYPE == "0xc"')
+what="${parts[((part-1))]}"
+if [[ ! "$what" ]]
+then
+	exit 1
+fi
+
 if ! unit="$(systemd-escape boot/firmware.mount)"
 then
 	exit 1
@@ -41,7 +51,7 @@ Before=local-fs.target
 After=-boot.mount
 
 [Mount]
-What=/dev/mmcblk0p$part
+What=$what
 Where=/boot/firmware
 Type=vfat
 Options=rw
