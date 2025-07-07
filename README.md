@@ -67,7 +67,7 @@ a [Bitbake recipe] is available in the layer [meta-downstream].
 
 ## PATCHES
 
-Sumbit patches at <https://github.com/Rtone/raspberrypi-firmware-systemd-generator/pulls>
+Submit patches at <https://github.com/Rtone/raspberrypi-firmware-systemd-generator/pulls>
 
 ## BUGS
 
